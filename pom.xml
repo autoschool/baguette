@@ -15,7 +15,6 @@
 
         <jersey.version>2.13</jersey.version>
         <sl4j.version>1.7.7</sl4j.version>
-        <jetty.port>9998</jetty.port>
     </properties>
 
     <dependencies>
@@ -30,6 +29,8 @@
             <artifactId>jersey-mvc-freemarker</artifactId>
             <version>${jersey.version}</version>
         </dependency>
+
+        <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
