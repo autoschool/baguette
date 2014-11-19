@@ -7,22 +7,22 @@ html {
     font-size: 16px;
 }
 body {
-    padding: 2rem 1.5rem;
+    padding: 2em 1.5em;
     line-height: 1.5;
     color: #555;
     background-color: white;
 }
 p {
-    margin: 0 0 1rem;
+    margin: 0 0 1em;
 }
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 auto 0.5rem;
+    margin: 0 auto 0.5em;
     line-height: 1.1;
     color: #333;
 }
-h1 { font-size: 2rem }
-h2 { font-size: 1.6rem }
-h3 { font-size: 1.2rem }
+h1 { font-size: 2em }
+h2 { font-size: 1.6em }
+h3 { font-size: 1.2em }
 
 button {
     color: #555;
@@ -40,8 +40,8 @@ input,
 textarea {
     color: #333;
     width: 100%;
-    padding: 0.15rem;
-    margin: 0.5rem 0 1rem;
+    padding: 0.15em;
+    margin: 0.5em 0 1em;
     border: 1px solid #ddd;
     background-color: #fbfbfb;
     box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
@@ -57,13 +57,13 @@ a:hover {
 }
 
 .page-container {
-    max-width: 32rem;
+    max-width: 32em;
     margin: 0 auto;
 }
 
 .page-header {
-    margin-bottom: 3rem;
-    font-size: 1rem;
+    margin-bottom: 3em;
+    font-size: 1em;
     color: #777;
 }
 
@@ -81,7 +81,7 @@ main a {
 }
 
 .nav li + li {
-    margin-left: 0.5rem;
+    margin-left: 0.5em;
 }
 
 .clearfix {
@@ -92,11 +92,11 @@ main a {
 }
 
 .page-content {
-    margin-top: 2rem;
+    margin-top: 2em;
 }
 
 .post-item {
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
     overflow: auto; /* clearfix */
 }
 .post-date {
@@ -106,15 +106,15 @@ main a {
 }
 
 
-@media (min-width: 48rem) {
+@media (min-width: 48em) {
     html {
         font-size: 20px;
     }
 }
-/* 32rem + 2*1rem */
-@media (min-width: 34rem) {
+/* 32em + 2*1em */
+@media (min-width: 34em) {
     .page-header {
-        padding-top: 1rem;
+        padding-top: 1em;
         text-align: right;
     }
     .page-title {
@@ -122,6 +122,6 @@ main a {
     }
     .post-date {
         float: right;
-        margin-left: 1rem;
+        margin-left: 1em;
     }
 }
