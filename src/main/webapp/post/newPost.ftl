@@ -1,6 +1,6 @@
 <#-- @ftlvariable name="model" type="ru.qatools.school.baguette.models.Post[]" -->
 <#import "/layouts/main.ftl" as layout />
-<@layout.layout title="new post">
+<@layout.layout title="Add New Post">
 <div>
     <h1>Add new post</h1>
 

@@ -1,8 +1,13 @@
-<#macro layout title="baguette">
+<#macro layout title="">
 <!DOCTYPE html>
 <html>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>${title}</title>
+    <title>
+        <#if title?has_content>
+            ${title} &mdash;
+        </#if>
+        Baguette
+    </title>
 
     <link rel="stylesheet" href="/public/vendor/css/normalize.css">
     <link rel="stylesheet" href="/public/app/css/main.css">
@@ -21,6 +26,9 @@
         <main>
             <#nested />
         </main>
+        <footer>
+            Powered by <a href="https://github.com/autoschool/baguette">Baguette</a> &ndash; Delicious blog platform
+        </footer>
     </div>
 </body>
 </#macro>
