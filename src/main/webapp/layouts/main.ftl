@@ -4,6 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>${title}</title>
 
+    <link rel="stylesheet" href="/public/vendor/css/normalize.css">
     <link rel="stylesheet" href="/public/app/css/main.css">
 </html>
 <body>
