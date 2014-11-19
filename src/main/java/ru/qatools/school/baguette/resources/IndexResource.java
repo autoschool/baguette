@@ -15,7 +15,6 @@ import javax.ws.rs.core.MediaType;
 public class IndexResource {
 
     @GET
-    @Path("/")
     @Template(name = "/index.ftl")
     public String showHello() {
         return "baguette";

@@ -1,0 +1,30 @@
+header {
+}
+
+.navbar-logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #f2f2f2;
+    margin: 0;
+}
+
+.navbar-menu {
+    background: #269abc;
+}
+
+.navbar-link {
+    color: #ffffff;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.logo {
+    color: #636363;
+}
+
+.logo:hover {
+    color: #737373;
+    text-decoration: none;
+}
