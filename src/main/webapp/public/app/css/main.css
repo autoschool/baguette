@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 16px;
@@ -20,6 +24,29 @@ h1 { font-size: 2rem }
 h2 { font-size: 1.6rem }
 h3 { font-size: 1.2rem }
 
+button {
+    color: #555;
+    background-color: #eee;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+}
+button.primary {
+    color: white;
+    background-color: deepskyblue;
+    border: 1px solid skyblue;
+}
+
+input,
+textarea {
+    color: #333;
+    width: 100%;
+    padding: 0.15rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #ddd;
+    background-color: #fbfbfb;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+}
+
 a {
     color: deepskyblue;
     text-decoration: none;
@@ -39,6 +66,7 @@ a:hover {
     font-size: 1rem;
     color: #777;
 }
+
 .nav {
     padding-left: 0;
     margin: 0;
@@ -47,8 +75,16 @@ a:hover {
 .nav li {
     display: inline-block;
 }
+
 .nav li + li {
     margin-left: 0.5rem;
+}
+
+.clearfix {
+    overflow: auto;
+}
+.pull-right {
+    float: right;
 }
 
 

@@ -2,18 +2,19 @@
 <#import "/layouts/main.ftl" as layout />
 <@layout.layout title="new post">
 <div>
-    <h1>Create new post</h1>
+    <h1>Add new post</h1>
 
     <form action="/post" method="post">
         <div>
-            <label>Title:</label>
-            <input name="title" type="text" placeholder="Title">
+            <label for="input-post-title">Title</label>
+            <input id="input-post-title" name="title" type="text" value="">
         </div>
         <div>
-            <textarea name="body" rows="10" placeholder="Post Text"></textarea>
+            <label for="textarea-post-body">Body</label>
+            <textarea id="textarea-post-body" name="body" rows="10" placeholder=""></textarea>
         </div>
-        <div>
-            <button type="submit">Save</button>
+        <div class="clearfix">
+            <button class="primary pull-right" type="submit">Save</button>
         </div>
     </form>
 </div>
