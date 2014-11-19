@@ -87,6 +87,20 @@ a:hover {
     float: right;
 }
 
+.page-content {
+    margin-top: 2rem;
+}
+
+.post-item {
+    margin-bottom: 1rem;
+    overflow: auto; /* clearfix */
+}
+.post-date {
+    display: block;
+    color: #ccc;
+    margin: 0;
+}
+
 
 @media (min-width: 48rem) {
     html {
@@ -101,5 +115,9 @@ a:hover {
     }
     .page-title {
         float: left;
+    }
+    .post-date {
+        float: right;
+        margin-left: 1rem;
     }
 }
