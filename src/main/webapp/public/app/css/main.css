@@ -1,0 +1,69 @@
+html {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+}
+body {
+    padding: 2rem 1.5rem;
+    line-height: 1.5;
+    color: #555;
+    background-color: white;
+}
+p {
+    margin: 0 0 1rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 auto 0.5rem;
+    line-height: 1.1;
+    color: #333;
+}
+h1 { font-size: 2rem }
+h2 { font-size: 1.6rem }
+h3 { font-size: 1.2rem }
+
+a {
+    color: deepskyblue;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+a:hover {
+    color: skyblue;
+}
+
+.page-container {
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    color: #777;
+}
+.nav {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav li {
+    display: inline-block;
+}
+.nav li + li {
+    margin-left: 0.5rem;
+}
+
+
+@media (min-width: 48rem) {
+    html {
+        font-size: 20px;
+    }
+}
+/* 32rem + 2*1rem */
+@media (min-width: 34rem) {
+    .page-header {
+        padding-top: 1rem;
+        text-align: right;
+    }
+    .page-title {
+        float: left;
+    }
+}
