@@ -56,15 +56,25 @@ a:hover {
     color: #2a7abf;
 }
 
-.page-container {
-    max-width: 32em;
-    margin: 0 auto;
+.baguette {
+    text-align: center;
+}
+.baguette > img {
+    width: 100%;
+}
+.baguette > p {
+    font-size: 14px;
+    color: #ccc;
 }
 
-.page-header {
-    margin-bottom: 3em;
-    font-size: 1em;
-    color: #777;
+.clearfix {
+    overflow: auto;
+}
+
+footer {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 3em;
 }
 
 main a {
@@ -84,9 +94,17 @@ main a {
     margin-left: 0.5em;
 }
 
-.clearfix {
-    overflow: auto;
+.page-container {
+    max-width: 32em;
+    margin: 0 auto;
 }
+
+.page-header {
+    margin-bottom: 3em;
+    font-size: 1em;
+    color: #777;
+}
+
 .pull-right {
     float: right;
 }
