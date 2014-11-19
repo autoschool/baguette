@@ -1,12 +1,12 @@
 <#-- @ftlvariable name="model" type="ru.qatools.school.baguette.models.Post" -->
 <#import "/layouts/main.ftl" as layout />
-<@layout.layout title="post">
-<div class="row">
-    <div class="col-md-12">
-        <div class="page-header">
-            <h2>${model.title}</h2>
-        </div>
-        <p>${model.body}</p>
+<@layout.layout title="${model.title}">
+<div>
+    <h1>${model.title}</h1>
+    <span>${model.createdAt}</span>
+
+    <div>
+        ${model.body}
     </div>
 </div>
 </@layout.layout>
