@@ -32,8 +32,8 @@ button {
 }
 button.primary {
     color: white;
-    background-color: deepskyblue;
-    border: 1px solid skyblue;
+    background-color: #1c71a6;
+    border: 1px solid #2a7abf;
 }
 
 input,
@@ -48,12 +48,12 @@ textarea {
 }
 
 a {
-    color: deepskyblue;
+    color: #1c71a6;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
 a:hover {
-    color: skyblue;
+    color: #2a7abf;
 }
 
 .page-container {
@@ -65,6 +65,10 @@ a:hover {
     margin-bottom: 3rem;
     font-size: 1rem;
     color: #777;
+}
+
+main a {
+    border-bottom: 1px solid #ddd;
 }
 
 .nav {
