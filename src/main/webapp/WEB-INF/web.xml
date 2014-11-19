@@ -9,6 +9,10 @@
             <param-name>javax.ws.rs.Application</param-name>
             <param-value>ru.qatools.school.baguette.util.Server</param-value>
         </init-param>
+        <init-param>
+            <param-name>jersey.config.servlet.filter.staticContentRegex</param-name>
+            <param-value>/public/(bootstrap|jquery|app)/(js|css|img)/.*</param-value>
+        </init-param>
     </filter>
 
     <filter-mapping>
