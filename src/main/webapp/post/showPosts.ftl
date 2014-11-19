@@ -4,6 +4,9 @@
 <div>
     <h1>All posts</h1>
 
+    <#if !model?has_content>
+        <p>Nothing here yet.</p>
+    </#if>
     <#list model as post>
         <div>
             <span>${post.createdAt}</span>
