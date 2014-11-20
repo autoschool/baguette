@@ -35,6 +35,16 @@ button.primary {
     background-color: #1c71a6;
     border: 1px solid #2a7abf;
 }
+button.link {
+    background-color: transparent;
+    border: none;
+    color: #1c71a6;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    color: #2a7abf;
+}
 
 input,
 textarea {
@@ -57,6 +67,8 @@ a:hover {
 }
 a.action { color: #00A044 }
 a.action:hover { color: #35B069 }
+a.danger, button.link.danger { color: #A62631 }
+a.danger:hover, button.link.danger:hover { color: #BF2C47 }
 
 .baguette {
     text-align: center;
@@ -79,7 +91,7 @@ footer {
     margin-top: 3em;
 }
 
-main a {
+.page-content a {
     border-bottom: 1px solid #ddd;
 }
 
@@ -117,6 +129,10 @@ main a {
 
 .post-edit {
     display: block;
+}
+.delete-post-form {
+    display: inline-block;
+    margin-right: 0.5em;
 }
 .post-item {
     margin-bottom: 1em;

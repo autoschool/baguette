@@ -59,6 +59,18 @@ public class PostResource {
     }
 
     @POST
+    @Path("/delete/{id}")
+    @Template(name = "/post/showPosts.ftl")
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public List<Post> deletePost(@PathParam("id") int id) {
+        Post post = Post.findById(id);
+        if (post != null) {
+            post.delete();
+        }
+        return showPosts();
+    }
+
+    @POST
     @Template(name = "/post/showPost.ftl")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Post createPost(@FormParam("title") String title,
