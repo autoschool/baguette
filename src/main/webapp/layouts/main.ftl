@@ -21,7 +21,7 @@
             </h3>
             <ul class="nav">
                 <li><a href="/post/all">All posts</a></li>
-                <li><a href="#">About</a></li>
+                <li><a class="action" href="/post/new">New post</a></li>
             </ul>
         </header>
         <main>
