@@ -35,6 +35,16 @@ button.primary {
     background-color: #1c71a6;
     border: 1px solid #2a7abf;
 }
+button.link {
+    background-color: transparent;
+    border: none;
+    color: #1c71a6;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    color: #2a7abf;
+}
 
 input,
 textarea {
@@ -55,6 +65,10 @@ a {
 a:hover {
     color: #2a7abf;
 }
+a.action { color: #00A044 }
+a.action:hover { color: #35B069 }
+a.danger, button.link.danger { color: #A62631 }
+a.danger:hover, button.link.danger:hover { color: #BF2C47 }
 
 .baguette {
     text-align: center;
@@ -63,7 +77,7 @@ a:hover {
     width: 100%;
 }
 .baguette > p {
-    font-size: 14px;
+    font-size: 0.8em;
     color: #ccc;
 }
 
@@ -72,12 +86,12 @@ a:hover {
 }
 
 footer {
-    font-size: 14px;
+    font-size: 0.8em;
     text-align: center;
     margin-top: 3em;
 }
 
-main a {
+.page-content a {
     border-bottom: 1px solid #ddd;
 }
 
@@ -113,6 +127,13 @@ main a {
     margin-top: 2em;
 }
 
+.post-edit {
+    display: block;
+}
+.delete-post-form {
+    display: inline-block;
+    margin-right: 0.5em;
+}
 .post-item {
     margin-bottom: 1em;
     overflow: auto; /* clearfix */
@@ -121,6 +142,9 @@ main a {
     display: block;
     color: #ccc;
     margin: 0;
+}
+.post-single {
+    overflow: auto; /* clearfix */
 }
 
 
@@ -138,6 +162,7 @@ main a {
     .page-title {
         float: left;
     }
+    .post-edit,
     .post-date {
         float: right;
         margin-left: 1em;
