@@ -35,6 +35,29 @@ public class PostResource {
         return new Post();
     }
 
+    @GET
+    @Path("/edit/{id}")
+    @Template(name = "/post/newPost.ftl")
+    public Post showEditPostPage(@PathParam("id") int id) {
+        return Post.findById(id);
+    }
+
+    @POST
+    @Path("/edit/{id}")
+    @Template(name = "/post/showPost.ftl")
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public Post editPost(@PathParam("id") int id,
+                         @FormParam("title") String title,
+                         @FormParam("body") String body) {
+        Post post = Post.findById(id);
+        if (post != null) {
+            post.setTitle(title);
+            post.setBody(body);
+            post.save();
+        }
+        return post;
+    }
+
     @POST
     @Template(name = "/post/showPost.ftl")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
