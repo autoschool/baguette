@@ -1,14 +1,17 @@
 <#-- @ftlvariable name="model" type="ru.qatools.school.baguette.models.Post[]" -->
 <#import "/layouts/main.ftl" as layout />
-<@layout.layout title="posts">
-<div class="row">
-    <div class="col-md-12">
-        <h2>Posts</h2>
+<@layout.layout title="All Posts">
+<div>
+    <h1>All posts</h1>
+
+    <div class="page-content">
+        <#if !model?has_content>
+            <p>Nothing here yet.</p>
+        </#if>
         <#list model as post>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <a href="/post/${post.id}">${post.title}</a> at ${post.createdAt}<br/>
-                </div>
+            <div class="post-item">
+                <span class="post-date">${post.createdAt}</span>
+                <a href="/post/${post.id}">${post.title}</a>
             </div>
         </#list>
     </div>

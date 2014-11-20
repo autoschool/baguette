@@ -1,41 +1,35 @@
-<#macro layout title="baguette">
+<#macro layout title="">
+<!DOCTYPE html>
 <html>
-    <script src="/public/jquery/js/jquery.min.js" type="text/javascript"></script>
-    <link href="/public/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
-    <script src="/public/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>
+        <#if title?has_content>
+            ${title} &mdash;
+        </#if>
+        Baguette
+    </title>
 
-    <link href="/public/app/css/main.css" type="text/css" rel="stylesheet"/>
-
-    <title>${title}</title>
+    <link rel="stylesheet" href="/public/vendor/css/normalize.css">
+    <link rel="stylesheet" href="/public/app/css/main.css">
 </html>
 <body>
-    <header>
-        <nav class="navbar navbar-logo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h1>
-                            <a class="logo" href="\">Baguette</a>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <nav class="navbar navbar-menu" role="navigation">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <li><a class="navbar-link" href="/post/all">Posts</a></li>
-                </ul>
-                <form class="navbar-form navbar-left" method="GET" action="/post/new">
-                    <button type="submit" class="btn btn-default">Create</button>
-                </form>
-            </div>
-        </nav>
-    </header>
-    <div class="content">
-        <div class="container">
+    <div class="page-container">
+        <header class="page-header">
+            <h3 class="page-title">
+                <a href="/">%Username</a>
+            </h3>
+            <ul class="nav">
+                <li><a href="/post/all">All posts</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </header>
+        <main>
             <#nested />
-        </div>
+        </main>
+        <footer>
+            Powered by <a href="https://github.com/autoschool/baguette">Baguette</a> &ndash; Delicious blog platform
+        </footer>
     </div>
 </body>
 </#macro>
