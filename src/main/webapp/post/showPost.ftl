@@ -9,7 +9,7 @@
         <a class="action" href="/post/edit/${model.id}">Edit</a>
     </span>
     <h1>${model.title}</h1>
-    <span>${model.createdAt}</span>
+    <span>${model.createdAt?string("MMMM dd, yyyy")}</span>
 
     <div>
         ${model.body}
