@@ -128,6 +128,7 @@ footer {
 
 .post-edit {
     display: block;
+    margin-bottom: 0.5em;
 }
 .delete-post-form {
     display: inline-block;
@@ -137,13 +138,18 @@ footer {
     margin-bottom: 1em;
     overflow: auto; /* clearfix */
 }
-.post-date {
+.post-item > .post-date {
     display: block;
+}
+.post-date {
     color: #ccc;
     margin: 0;
 }
 .post-single {
     overflow: auto; /* clearfix */
+}
+.post-single > .post-body {
+    margin-top: 1.2em;
 }
 
 
@@ -162,7 +168,7 @@ footer {
         float: left;
     }
     .post-edit,
-    .post-date {
+    .post-item > .post-date {
         float: right;
         margin-left: 1em;
     }
