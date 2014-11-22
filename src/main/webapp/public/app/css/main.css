@@ -29,22 +29,23 @@ button {
     background-color: #eee;
     border: 1px solid #bbb;
     border-radius: 3px;
+    transition: all 0.2s ease-in-out;
 }
+button:hover { color: #444 }
 button.primary {
     color: white;
     background-color: #1c71a6;
     border: 1px solid #2a7abf;
 }
+button.primary:hover { color: #f0f0f0; }
 button.link {
     background-color: transparent;
     border: none;
     color: #1c71a6;
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    padding: 0;
 }
-button:hover {
-    color: #2a7abf;
-}
+button.link:hover { color: #2a7abf }
 
 input,
 textarea {
@@ -62,9 +63,7 @@ a {
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
-a:hover {
-    color: #2a7abf;
-}
+a:hover { color: #2a7abf }
 a.action { color: #00A044 }
 a.action:hover { color: #35B069 }
 a.danger, button.link.danger { color: #A62631 }
