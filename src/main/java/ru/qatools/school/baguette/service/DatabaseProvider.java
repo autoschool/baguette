@@ -12,10 +12,13 @@ import java.io.IOException;
 import static java.lang.String.format;
 import static java.nio.file.Files.createTempDirectory;
 
+ /**
+  * Created by vladzx on 19.11.14.
+  * */
 
 public class DatabaseProvider implements ContainerRequestFilter {
     private static final String DBUSER = "sa";
-    private final static Logger LOGGER = LoggerFactory.getLogger(DatabaseProvider.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DatabaseProvider.class);
     private static String dbUrl;
 
     static {
