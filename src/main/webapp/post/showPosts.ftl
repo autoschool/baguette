@@ -10,7 +10,7 @@
         </#if>
         <#list model as post>
             <div class="post-item">
-                <span class="post-date">${post.createdAt}</span>
+                <span class="post-date">${post.createdAt?string("MMMM dd, yyyy")}</span>
                 <a href="/post/${post.id}">${post.title}</a>
             </div>
         </#list>
