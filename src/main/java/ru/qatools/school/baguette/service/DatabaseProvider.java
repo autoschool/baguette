@@ -12,25 +12,26 @@ import java.io.IOException;
 import static java.lang.String.format;
 import static java.nio.file.Files.createTempDirectory;
 
-/**
- * Created by vladzx on 19.11.14.
- */
+ /**
+  * Created by vladzx on 19.11.14.
+  * */
+
 public class DatabaseProvider implements ContainerRequestFilter {
     private static final String DBUSER = "sa";
-    private final static Logger logger = LoggerFactory.getLogger(DatabaseProvider.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DatabaseProvider.class);
     private static String dbUrl;
 
     static {
         try {
             dbUrl = format("jdbc:h2:file:%s/%s,user=%s", getDbPath(), getDbName(), DBUSER);
-            logger.info(format("Starting embedded database with url '%s' ...", dbUrl));
+            LOGGER.info(format("Starting embedded database with url '%s' ...", dbUrl));
             openConnection();
             Flyway flyway = new Flyway();
             flyway.setDataSource(dbUrl, DBUSER, null);
             flyway.migrate();
         } catch (Exception e) {
-            logger.error("Failed to start embedded database", e);
-            System.exit(-1);
+            LOGGER.error("Failed to start embedded database", e);
+            System.exit(1);
         }
     }
 
