@@ -2,6 +2,8 @@ package ru.qatools.school.baguette.util;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.mvc.freemarker.FreemarkerMvcFeature;
+import ru.qatools.school.baguette.service.AuthenticationFilter;
+import ru.qatools.school.baguette.annotations.AuthenticationRequired;
 import ru.qatools.school.baguette.service.DatabaseProvider;
 
 import javax.ws.rs.container.DynamicFeature;
@@ -21,6 +23,10 @@ public class Server extends ResourceConfig {
             @Override
             public void configure(ResourceInfo resourceInfo, FeatureContext context) {
                 context.register(DatabaseProvider.class);
+
+                if (resourceInfo.getResourceMethod().isAnnotationPresent(AuthenticationRequired.class)) {
+                    context.register(AuthenticationFilter.class);
+                }
             }
         });
     }
