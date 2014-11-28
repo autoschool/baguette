@@ -6,7 +6,7 @@
         <#if model.isNew()>Add new<#else>Edit</#if> post
     </h1>
 
-    <form action="/post<#if !model.isNew()>/edit/${model.id}</#if>" method="post">
+    <form action="/post/<#if !model.isNew()>edit/${model.id}</#if>" method="post">
         <div>
             <label for="input-post-title">Title</label>
             <input id="input-post-title" name="title" type="text" value="${model.title!""}">
