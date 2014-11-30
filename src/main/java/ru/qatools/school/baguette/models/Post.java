@@ -25,6 +25,14 @@ public class Post extends Model {
         setString("body", body);
     }
 
+    public Long getAuthorId() {
+        return getLong("user_id");
+    }
+
+    public void setAuthorId(Long userId) {
+        setLong("user_id", userId);
+    }
+
     public Timestamp getCreatedAt() {
         return getTimestamp("created_at");
     }

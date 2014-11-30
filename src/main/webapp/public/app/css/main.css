@@ -16,6 +16,7 @@ body {
     background-color: white;
     margin: 0 0 3em; /* bottom = footer height */
 }
+
 p {
     margin: 0 0 1em;
 }
@@ -61,6 +62,11 @@ textarea {
     background-color: #fbfbfb;
     box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
 }
+input[type="file"] {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
 
 a {
     color: #1c71a6;
@@ -68,8 +74,8 @@ a {
     transition: all 0.2s ease-in-out;
 }
 a:hover { color: #2a7abf }
-a.action { color: #00A044 }
-a.action:hover { color: #35B069 }
+a.action, button.link.action { color: #00A044 }
+a.action:hover, button.link.action:hover { color: #35B069 }
 a.danger, button.link.danger { color: #A62631 }
 a.danger:hover, button.link.danger:hover { color: #BF2C47 }
 
@@ -163,6 +169,30 @@ footer {
     margin-top: 1.2em;
 }
 
+.user-profile {
+    text-align: center;
+}
+.user-avatar {
+    border: 1px solid #ddd;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+.user-avatar img {
+    margin: 3px;
+    border-radius: 50%;
+    width: 102px;
+    height: 102px;
+}
+.user-avatar img:hover {
+  opacity: 0.95;
+}
+.user-name {
+    margin-top: 0.5em;
+}
 
 @media (min-width: 48em) {
     html {

@@ -22,6 +22,7 @@
             <ul class="nav">
                 <li><a href="/post/all">All posts</a></li>
                 <li><a class="action" href="/post/new">New post</a></li>
+                <li><a class="action" href="/user/edit">Edit Profile</a></li>
             </ul>
         </header>
         <main>
