@@ -28,7 +28,7 @@ public class LoginResource {
     public Response login(@Context UriInfo uriInfo, @FormParam("name") String name, @FormParam("password") String password) {
         try {
             String authToken = Authenticator.login(name, password);
-            URI postsPageUri = uriInfo.getBaseUriBuilder().path("../post/all").build();
+            URI postsPageUri = UriBuilder.fromUri("post/all").build();
             return Response.seeOther(postsPageUri).cookie(new NewCookie("authToken", authToken)).build();
         } catch (LoginException e) {
             return Response.status(Response.Status.UNAUTHORIZED).entity(e.getMessage()).build();

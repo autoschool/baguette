@@ -7,6 +7,7 @@ import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.core.Cookie;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
 import java.io.IOException;
 import java.net.URI;
 import java.util.Map;
@@ -18,7 +19,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 
     @Override
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
-        URI loginPageUri = containerRequestContext.getUriInfo().getBaseUriBuilder().path("../login").build();
+        URI loginPageUri = UriBuilder.fromUri("login").build();
         Map<String, Cookie> cookies = containerRequestContext.getCookies();
         if (cookies.get("authToken") != null) {
             String authToken = cookies.get("authToken").getValue();

@@ -1,5 +1,5 @@
 <#import "/layouts/main.ftl" as layout />
-<@layout.layout title="Edit Post">
+<@layout.layout title="Login">
 <div>
     <h1>
         Login
