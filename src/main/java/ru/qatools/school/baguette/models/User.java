@@ -23,6 +23,30 @@ public class User extends Model {
         return getString("password");
     }
 
+    public void setFullName(String fullName) {
+        setString("full_name", fullName);
+    }
+
+    public String getFullName() {
+        return getString("full_name");
+    }
+
+    public void setEmail(String Email) {
+        setString("email", Email);
+    }
+
+    public String getEmail() {
+        return getString("email");
+    }
+
+    public void setWebsite(String website) {
+        setString("website", website);
+    }
+
+    public String getWebsite() {
+        return getString("website");
+    }
+
     public Long getId() {
         return getLong("id");
     }
