@@ -2,6 +2,7 @@ package ru.qatools.school.baguette.resources;
 
 import org.glassfish.jersey.server.mvc.Template;
 import ru.qatools.school.baguette.models.Post;
+import ru.qatools.school.baguette.annotations.AuthenticationRequired;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -29,6 +30,7 @@ public class PostResource {
     }
 
     @GET
+    @AuthenticationRequired
     @Path("/new")
     @Template(name = "/post/newPost.ftl")
     public Post newPost() {
@@ -36,6 +38,7 @@ public class PostResource {
     }
 
     @GET
+    @AuthenticationRequired
     @Path("/edit/{id}")
     @Template(name = "/post/newPost.ftl")
     public Post showEditPostPage(@PathParam("id") int id) {
@@ -43,6 +46,7 @@ public class PostResource {
     }
 
     @POST
+    @AuthenticationRequired
     @Path("/edit/{id}")
     @Template(name = "/post/showPost.ftl")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -59,6 +63,7 @@ public class PostResource {
     }
 
     @POST
+    @AuthenticationRequired
     @Path("/delete/{id}")
     @Template(name = "/post/showPosts.ftl")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -71,6 +76,7 @@ public class PostResource {
     }
 
     @POST
+    @AuthenticationRequired
     @Template(name = "/post/showPost.ftl")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Post createPost(@FormParam("title") String title,
